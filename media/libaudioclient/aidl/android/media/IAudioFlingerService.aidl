@@ -88,6 +88,10 @@ interface IAudioFlingerService {
     void setMasterBalance(float balance);
     float getMasterBalance();
 
+    void setAppVolume(@utf8InCpp String packageName, float value);
+    void setAppMute(@utf8InCpp String packageName, boolean muted);
+    AppVolumeData[] listAppVolumes();
+
     /*
      * Set/gets stream type state. This will probably be used by
      * the preference panel, mostly.
